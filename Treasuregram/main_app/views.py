@@ -7,14 +7,15 @@ def index(request):
     return render(request, 'index.html', {'treasures': treasures})
 
 class Treasure:
-    def __init__(self, name, value, material, location):
+    def __init__(self, name, value, material, location, image):
         self.name = name
         self.value = value
         self.material = material
         self.location = location
+        self.image = image
 
 treasures = [
-    Treasure('Gold nugget', 500.00, 'gold', 'Aspen, CO'),
-    Treasure('Iron pyrite', 2.00, 'not real gold', 'Cripple Creek'),
-    Treasure('Coffee can', 20.00, 'tin', 'Colorado Springs, CO')
+    Treasure('Pumpkin', 500.00, 'organic', 'Aspen', '../static/images/jack-o-lantern-light.svg'),
+    Treasure('Iron pyrite', 2.00, 'not real gold', 'Cripple Creek', '../static/images/jack-o-lantern-light.svg'),
+    Treasure('Coffee can', 20.00, 'tin', 'Colorado Springs, CO', '../static/images/jack-o-lantern-light.svg')
 ]
