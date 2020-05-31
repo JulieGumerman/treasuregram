@@ -17,19 +17,16 @@
     </nav>
     <main class="container" role="main">
     <h1>TreasureGram</h1>
-    <div class="panel panel-default">
         {% for treasure in treasures %}
-        <div class="panel-heading">
-            <h2 class="panel-title">{{treasure.name}}</h2>
-        </div>
-        <div class="panel-body">
-            <p>{{treasure.value}}</p>
-            <p>{{treasure.material}}</p>
-            <p>{{treasure.location}}</p>
-            <img src={{treasure.image}} height="200"/>
+        <div class="card bg-light text-dark" style="width: 200px">
+            <img src="{{treasure.image}}" class="card-img-top" style="height: 100px"/>
+            <div class="card-body">
+                <h2 class="card-title">{{treasure.name}}</h2>
+                
+            </div>
+            
         </div>
         {% endfor %}
-    </div>
     </main>
 </body>
 </html>
